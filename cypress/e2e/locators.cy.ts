@@ -23,5 +23,27 @@ describe('Locators', () => {
         cy.get("button.Elements-btn[type='submit']")
         // Get all elements with specific data test id
         cy.get("[data-cy='btn-id-1']")
+        //custome cypress commnad in /support/commands.ts
+        cy.getByTestId("btn-id-1")
     })
+
+    it('locating elements with contain', () => {
+        // Get element by text
+        cy.contains("Unique Text")
+
+        // Get element by text
+        cy.contains("Not Unique Text")
+
+        // Combine get with contains
+        cy.get("[type='submit']").contains("Not Unique Text")
+
+        // Get element by tag name and text
+        cy.contains("[type='submit']", "Not Unique Text")
+
+        // Get element by descent and text 
+        cy.contains("span", "Not Unique Text")
+        cy.contains("form", "Not Unique Text")
+        cy.get("form").contains("Not Unique Text")
+    })
+
 })
