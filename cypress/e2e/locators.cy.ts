@@ -31,7 +31,7 @@ describe('Locators', () => {
         // Get element by text
         cy.contains("Unique Text")
 
-        // Get element by text
+        // Get element by text (this method not good because get just one but actually others also have same text)
         cy.contains("Not Unique Text")
 
         // Combine get with contains
@@ -44,6 +44,12 @@ describe('Locators', () => {
         cy.contains("span", "Not Unique Text")
         cy.contains("form", "Not Unique Text")
         cy.get("form").contains("Not Unique Text")
+    })
+
+    it("locating elements with find", () => {
+        //under this id must have this child class 
+        cy.get("#form-1").find(".btn-1")
+        cy.get("#form-1").find(".btn-2")
     })
 
 })
