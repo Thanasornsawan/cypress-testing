@@ -6,6 +6,7 @@ describe("habit dashboard", () => {
 
     it("should display modal when add button is clicked", () => {
         cy.contains("button", "Add").click()
+        //verify that modal show up
         cy.contains("Add a new habit").should("be.visible")
     })
 
@@ -13,6 +14,7 @@ describe("habit dashboard", () => {
         cy.contains("button", "Add").click()
         cy.get("input[placeholder='Habit']").type("Drink a cup of water")
         cy.contains("Save Changes").click()
+        //verify that card of text show up after add
         cy
         .contains("Drink a cup of water")
         .should('be.visible')
