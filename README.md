@@ -34,5 +34,5 @@ Step2: npm start #run localhost:3000 for test<br />
 Step3: npm install cypress --save-dev <br />
 Step4: npx cypress open<br />
 
-![cypress result](https://github.com/Thanasornsawan/cypress-testing/blob/main/images/test.PNG?raw=true)
+![cypress result](https://github.com/Thanasornsawan/cypress-testing/blob/main/images/test.JPG?raw=true)
 
